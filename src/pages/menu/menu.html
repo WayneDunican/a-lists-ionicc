@@ -1,0 +1,37 @@
+<!--Header-->
+<ion-header>
+
+  <ion-navbar color="smoke">
+    <ion-title>Add List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--Content-->
+<ion-content padding>
+
+	<p>Create List</p>
+<!--Form-->
+	
+	<ion-item>
+		<ion-label floating>List ID</ion-label>
+   		<ion-input type="number" [(ngModel)]="list.listid"></ion-input>
+   	</ion-item>
+
+    <ion-item>
+    	<ion-label floating>Email Address</ion-label>
+      <ion-input type="text" value="{{username}}" [(ngModel)]="list.email" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    	<ion-label floating>List Name</ion-label>
+      <ion-input type="text" [(ngModel)]="list.listname"></ion-input>
+    </ion-item>
+
+    {{list | json}}
+	
+	<button ion-button (click)="addList(list)">Add List</button>
+	
+<!-- 
+	<button ion-button (click)="openModal()">Add Item Modal</button> -->
+</ion-content>

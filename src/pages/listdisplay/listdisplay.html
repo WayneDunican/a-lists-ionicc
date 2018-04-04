@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="toolbar">
+    <ion-title>List Display</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only navPush="MenuPage" [navParams]="{email: username}"> <ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h4>Lists</h4>   
+      
+      <!-- Repeat the ion-item for all lists inside (list-instance) -->
+      <ion-list>
+        <ion-list-header>Lists</ion-list-header>
+        <ion-item *ngFor="let list of listInstances$ | async | filter:username" navPush="ViewlistPage" 
+        [navParams]="{list: list}">
+          <h2>{{list.listname}}</h2>
+          <h3>{{list.email}}</h3>
+            <ion-item *ngFor="let item of itemInstances$ | async | filterItemById:list.listid">
+              <h3>{{item.itemName}}</h3>
+              <h4>{{item.itemID}}</h4>
+    
+            </ion-item>
+        </ion-item>
+      </ion-list>
+
+
+</ion-content>

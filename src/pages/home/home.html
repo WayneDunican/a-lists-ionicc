@@ -1,0 +1,39 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/WikiProject_Council_project_list_icon.svg/2000px-WikiProject_Council_project_list_icon.svg.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+  <ion-navbar color="toolbar">
+    <ion-title>
+      A-Lists Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Login or Register</p>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+  <ion-img width="190" height="100" style="margin: auto; display: block;" src="https://d21buns5ku92am.cloudfront.net/59047/images/215672-Build-contact-list-f43124-original-1467125383.jpg"></ion-img>
+
+  <br />
+
+  <button ion-button block outline (click)="loginUserTwo()">Login</button>
+
+</ion-content>

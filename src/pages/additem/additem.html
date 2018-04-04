@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="smoke">
+    <ion-title>Add Item</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<p>Create List</p>
+	
+		
+
+    <ion-item>
+    	<ion-label floating>Item ID</ion-label>
+      <ion-input type="number" [(ngModel)]="item.itemID" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    	<ion-label floating>Item Name</ion-label>
+      <ion-input type="text" [(ngModel)]="item.itemName"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>Purchased?</ion-label>
+				 <ion-input type="boolean" [(ngModel)]="item.purchased"></ion-input>
+			 </ion-item>
+	
+			<ion-item>
+				<ion-label floating>Place of Purchase</ion-label>
+				<ion-input type="text" [(ngModel)]="item.placeOfPurchase"></ion-input>
+			</ion-item>
+	
+			<ion-item>
+				<ion-label floating>Item Price</ion-label>
+				<ion-input type="number" [(ngModel)]="item.itemPrice"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Age</ion-label>
+				<ion-input type="number" [(ngModel)]="item.age"></ion-input>
+			</ion-item>
+
+    {{item | json}}
+	
+	<button ion-button (click)="addItem(item)">Add List</button>
+	
+</ion-content>

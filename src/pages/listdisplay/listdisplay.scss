@@ -1,0 +1,17 @@
+page-listdisplay {
+
+}
+.username{ font-size: 10px; color: color($colors, 'light');; font-weight:bold; padding-left: 10px;}
+.messageContent{ font-size: 15px; color: color($colors, 'smoke'); font-weight:bold; font-style: normal; padding-left: 5px;}
+.listitemone{ font-size:16px; padding-left: 5px; }
+.listitemtwo{ font-size:16px; padding-left: 5px; }
+.listDisplayBlock{
+    display: inline-block;
+    padding: 5px 10px;
+    background: color($colors, 'primary');
+    margin: 5px;
+    color: white;
+    border-radius: 3px;
+}
+ion-card ion-card-header{ background: color($colors, 'golden'); color: white; }
+button { background: color($colors, 'smoke'); }

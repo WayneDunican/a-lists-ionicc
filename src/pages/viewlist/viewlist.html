@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar color="toolbar">
+    <ion-title>{{list?.listname}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only navPush="AdditemPage" [navParams]="{listid: listid}"> <ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <p>Edit List</p>
+    <!--Form-->
+      
+      <ion-item>
+        <ion-label floating>List ID</ion-label>
+           <ion-input type="number" [(ngModel)]="list.listid" disabled="true"></ion-input>
+         </ion-item>
+    
+        <ion-item>
+          <ion-label floating>Email Address</ion-label>
+          <ion-input type="text" [(ngModel)]="list.email" disabled="true"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>List Name</ion-label>
+          <ion-input type="text" [(ngModel)]="list.listname"></ion-input>
+        </ion-item>
+      
+        <button ion-button block (click)="editList(list)">Save</button>
+        <button ion-button block color="danger" (click)="removeList(list)">Delete</button>
+        <button ion-button block color="smoke" (click)="shareList(list)">Share</button>
+</ion-content>
